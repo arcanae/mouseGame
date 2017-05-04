@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Button</title>
+    <title>mouseGame</title>
 </head>
 
 <body>
     <!--<button id="mbut">Click here</button>-->
-    <div id="image"></div>
+    <img id="image" src="../stripe.jpg" alt="img">
     <style>
         body {
             height: 100vh;
@@ -18,9 +18,9 @@
         }
         
         #image {
+            position: absolute;
             height: 40px;
             width: 40px;
-            background-image: url("../stripe.jpg");
         }
     </style>
 
@@ -35,10 +35,10 @@
             let img = document.querySelector("#image");
             Pos.x = event.pageX;
             Pos.y = event.pageY;
-
-
             console.log(Pos);
-            //img.style.background-position-x = Pos.x;
+
+            img.style.top = Pos.y.toString() + "px";
+            img.style.left = Pos.x.toString() + "px";
         });
     </script>
 
